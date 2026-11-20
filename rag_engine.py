@@ -5,7 +5,6 @@ from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
 from pathlib import Path
 
-
 # Load PDF
 def load_pdf(pdf_path):
     reader = PdfReader(str(pdf_path))
@@ -16,13 +15,10 @@ def load_pdf(pdf_path):
         raise ValueError(f"No readable text found in {pdf_path}")
 
     return full_text
-
-
 # Create text chunks
 def create_chunks(full_text, chunksize=500, overlap=100):
     chunks = []
     start = 0
-
     while start < len(full_text):
         end = start + chunksize
         chunk = full_text[start:end]
