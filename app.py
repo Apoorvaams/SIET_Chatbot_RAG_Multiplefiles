@@ -10,7 +10,7 @@ st.caption("Lanched by Apoorva M S")
 def initiate_rag():
   return load_base("college_docs")
 
-index, embed_model, chunks = initialize_rag()
+index, embed_model, chunks = initiate_rag()
 if "chat_hist" not in st.session_state:   #load and display chat history if exsit if not create new
   st.session_state.chat_hist =[]
 
