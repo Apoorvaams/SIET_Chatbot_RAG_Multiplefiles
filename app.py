@@ -7,6 +7,7 @@ st.caption("RAG Pipeline with multiple files")
 st.caption("Lanched by Apoorva M S")
 
 @st.cache_resource
+
 def initiate_rag():
   return load_base("college_docs")
 
